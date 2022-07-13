@@ -1,0 +1,509 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2D63C44-94F0-4E17-B11F-574D0EEE1E2C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLKSNew</RootNamespace>
+    <AssemblyName>QLKSNew</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.2" />
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2" />
+    <Reference Include="DevExpress.Printing.v19.2.Core" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.2.5, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BangLuong.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BangThuePhong.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BoPhan.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChucVu.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cons\cons.cs" />
+    <Compile Include="DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKy.Designer.cs">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonThu.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiPhong.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Phong.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLKS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLKS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLKS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLKS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLKS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy.Designer.cs">
+      <DependentUpon>QuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThongKe.Designer.cs">
+      <DependentUpon>QuanLyThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThuePhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThuePhong.Designer.cs">
+      <DependentUpon>QuanLyThuePhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RpThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RpThu.Designer.cs">
+      <DependentUpon>RpThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="SuDungDichVu.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimKiemPhong.Designer.cs">
+      <DependentUpon>TimKiemPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TTDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TTDangKy.Designer.cs">
+      <DependentUpon>TTDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Doimatkhau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Doimatkhau.Designer.cs">
+      <DependentUpon>uc_Doimatkhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Doimatkhau1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Doimatkhau1.Designer.cs">
+      <DependentUpon>uc_Doimatkhau1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Doimatkhau2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Doimatkhau2.Designer.cs">
+      <DependentUpon>uc_Doimatkhau2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Khachsan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Khachsan.Designer.cs">
+      <DependentUpon>uc_Khachsan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Quanlybangluong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Quanlybangluong.Designer.cs">
+      <DependentUpon>uc_Quanlybangluong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Quanlydichvu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Quanlydichvu.Designer.cs">
+      <DependentUpon>uc_Quanlydichvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Quanlykhachhang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Quanlykhachhang.Designer.cs">
+      <DependentUpon>uc_Quanlykhachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Quanlyloaiphong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Quanlyloaiphong.Designer.cs">
+      <DependentUpon>uc_Quanlyloaiphong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Quanlynhansu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Quanlynhansu.Designer.cs">
+      <DependentUpon>uc_Quanlynhansu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Quanlyphong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Quanlyphong.Designer.cs">
+      <DependentUpon>uc_Quanlyphong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Quanlythu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Quanlythu.Designer.cs">
+      <DependentUpon>uc_Quanlythu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Sudungdichvu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Sudungdichvu.Designer.cs">
+      <DependentUpon>uc_Sudungdichvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Tennhanvien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Tennhanvien.Designer.cs">
+      <DependentUpon>uc_Tennhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Tennhanvien1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Tennhanvien1.Designer.cs">
+      <DependentUpon>uc_Tennhanvien1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_TenNhanVien2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_TenNhanVien2.Designer.cs">
+      <DependentUpon>uc_TenNhanVien2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_ThuePhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_ThuePhong.Designer.cs">
+      <DependentUpon>uc_ThuePhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\uc_Traphong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\uc_Traphong.Designer.cs">
+      <DependentUpon>uc_Traphong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DangKy.resx">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuanLy.resx">
+      <DependentUpon>QuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThongKe.resx">
+      <DependentUpon>QuanLyThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThuePhong.resx">
+      <DependentUpon>QuanLyThuePhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RpThu.rdlc" />
+    <EmbeddedResource Include="RpThu.resx">
+      <DependentUpon>RpThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimKiemPhong.resx">
+      <DependentUpon>TimKiemPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TTDangKy.resx">
+      <DependentUpon>TTDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Doimatkhau.resx">
+      <DependentUpon>uc_Doimatkhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Doimatkhau1.resx">
+      <DependentUpon>uc_Doimatkhau1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Doimatkhau2.resx">
+      <DependentUpon>uc_Doimatkhau2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Khachsan.resx">
+      <DependentUpon>uc_Khachsan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Quanlybangluong.resx">
+      <DependentUpon>uc_Quanlybangluong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Quanlydichvu.resx">
+      <DependentUpon>uc_Quanlydichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Quanlykhachhang.resx">
+      <DependentUpon>uc_Quanlykhachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Quanlyloaiphong.resx">
+      <DependentUpon>uc_Quanlyloaiphong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Quanlynhansu.resx">
+      <DependentUpon>uc_Quanlynhansu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Quanlyphong.resx">
+      <DependentUpon>uc_Quanlyphong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Quanlythu.resx">
+      <DependentUpon>uc_Quanlythu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Sudungdichvu.resx">
+      <DependentUpon>uc_Sudungdichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Tennhanvien.resx">
+      <DependentUpon>uc_Tennhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Tennhanvien1.resx">
+      <DependentUpon>uc_Tennhanvien1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_TenNhanVien2.resx">
+      <DependentUpon>uc_TenNhanVien2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_ThuePhong.resx">
+      <DependentUpon>uc_ThuePhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\uc_Traphong.resx">
+      <DependentUpon>uc_Traphong.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="QLKS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLKS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QLKS.edmx.diagram">
+      <DependentUpon>QLKS.edmx</DependentUpon>
+    </None>
+    <None Include="Report.xsc">
+      <DependentUpon>Report.xsd</DependentUpon>
+    </None>
+    <None Include="Report.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Report.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report.xss">
+      <DependentUpon>Report.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %282%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\illust58-2049.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\illust58-5847-01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8b167af653c2399dd93b952a48740620.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba6.jpg" />
+    <None Include="Resources\totoro.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba61.jpg" />
+    <None Include="Resources\2.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba619.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba611.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba6191.jpg" />
+    <None Include="Resources\3.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba63.jpg" />
+    <None Include="Resources\totoro1.jpg" />
+    <None Include="Resources\11.jpg" />
+    <None Include="Resources\totoro2.jpg" />
+    <None Include="Resources\totoro3.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba6111.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba616.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba6161.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba631.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba6112.jpg" />
+    <None Include="Resources\totoro4.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba615.jpg" />
+    <None Include="Resources\totoro5.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba6162.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba69.jpg" />
+    <None Include="Resources\111.jpg" />
+    <None Include="Resources\21.jpg" />
+    <Content Include="QLKS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLKS.edmx</DependentUpon>
+      <LastGenOutput>QLKS.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QLKS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLKS.edmx</DependentUpon>
+      <LastGenOutput>QLKS.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\112.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba6163.jpg" />
+    <None Include="Resources\5c01afda97f678cf801271eebb041ba691.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\khachsan.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
